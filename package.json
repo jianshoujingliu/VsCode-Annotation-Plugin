@@ -1,0 +1,59 @@
+{
+  "name": "kirito",
+  "displayName": "kirito",
+  "description": "快捷键生成TS/S代码类注释、快捷生成TS/JS代码方法注释、快捷生成TS/JS代码属性注释、能够支持各类型配置以实现个性化定制，并且满足约定大于配置、支持配置导出和导出。",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+"contributes": {
+  "commands": [
+    {
+      "command": "extension.generateClassComment",
+      "title": "Generate Class Comment"
+    },
+    {
+      "command": "extension.generateMethodComment",
+      "title": "Generate Method Comment"
+    }
+  ],
+  "keybindings": [
+    {
+      "command": "extension.generateClassComment",
+      "key": "ctrl",
+      "when": "editorTextFocus"
+    },
+    {
+      "command": "extension.generateMethodComment",
+      "key": "alt",
+      "when": "editorTextFocus"
+    }
+  ]
+}
+,
+
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.97.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.22.0",
+    "@typescript-eslint/parser": "^8.22.0",
+    "eslint": "^9.19.0",
+    "typescript": "^5.7.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
