@@ -25,12 +25,12 @@
   "keybindings": [
     {
       "command": "extension.generateClassComment",
-      "key": "ctrl",
+      "key": "ctrl+alt+b",
       "when": "editorTextFocus"
     },
     {
       "command": "extension.generateMethodComment",
-      "key": "alt",
+      "key": "ctrl+alt+c",
       "when": "editorTextFocus"
     }
   ]
